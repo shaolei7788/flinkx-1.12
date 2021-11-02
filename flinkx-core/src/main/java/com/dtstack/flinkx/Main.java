@@ -84,7 +84,6 @@ public class Main {
         LOG.info("------------program params-------------------------");
         Arrays.stream(args).forEach(arg -> LOG.info("{}", arg));
         LOG.info("-------------------------------------------");
-
         Options options = new OptionParser(args).getOptions();
         String job = URLDecoder.decode(options.getJob(), Charsets.UTF_8.name());
         Properties confProperties = PropertiesUtil.parseConf(options.getConfProp());
