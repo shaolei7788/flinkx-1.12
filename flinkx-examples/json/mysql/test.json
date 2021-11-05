@@ -1,0 +1,83 @@
+{
+  "job": {
+    "content": [
+      {
+        "reader": {
+          "name": "mysqlreader",
+          "parameter": {
+            "column": [
+              {
+                "name": "id",
+                "type": "int"
+              },
+              {
+                "name": "user_code",
+                "type": "string"
+              },
+              {
+                "name": "username",
+                "type": "string"
+              },
+              {
+                "name": "login_time",
+                "type": "datetime"
+              }
+            ],
+            "username": "root",
+            "password": "000000",
+            "connection": [
+              {
+                "jdbcUrl": [
+                  "jdbc:mysql://hadoop1:3306/test?useSSL=false"
+                ],
+                "table": [
+                  "user_login_log"
+                ]
+              }
+            ]
+          }
+        },
+        "writer": {
+          "name": "mysqlwriter",
+          "parameter": {
+            "username": "root",
+            "password": "root",
+            "connection": [
+              {
+                "jdbcUrl": "jdbc:mysql://hadoop1:3306/test?useSSL=false",
+                "table": [
+                  "user_login_log2"
+                ]
+              }
+            ],
+            "writeMode": "insert",
+            "column": [
+              {
+                "name": "id",
+                "type": "int"
+              },
+              {
+                "name": "code",
+                "type": "string"
+              },
+              {
+                "name": "name",
+                "type": "string"
+              },
+              {
+                "name": "login_time",
+                "type": "datetime"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "setting": {
+      "speed": {
+        "channel": 1,
+        "bytes": 0
+      }
+    }
+  }
+}

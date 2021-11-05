@@ -61,6 +61,16 @@
 			<version>3.0.0</version>
 			<scope>test</scope>
 		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/org.apache.flink/force-shading -->
+		<dependency>
+			<groupId>org.apache.flink</groupId>
+			<artifactId>force-shading</artifactId>
+			<version>1.12.5</version>
+		</dependency>
+
+
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
